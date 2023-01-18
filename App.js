@@ -5,7 +5,10 @@ import Header from './components/Header';
 
 export default function App() {
   const name = "my awesome app";
-  const [text, setText] = useState ();
+  function onTextEntered(changedText) {
+    console.log(changedText);
+  }
+  const [enteredText, setText] = useState ();
   function changeTextHandler (changedText) {
     setText(changedText);
   }
@@ -15,11 +18,12 @@ export default function App() {
         Welcome to {name}</Text>
       <StatusBar style="auto" />
       <Header name = "Max"/>
+      <Input  sendChangedText={onTextEntered}/>
       <TextInput 
       value = {text} 
       onChangeText= {changeTextHandler} 
       style = {{ backgroundColor: "#eee"}}/>
-      <Text>{text}</Text>
+      <Text>{enteredText}</Text>
     </View>
   );
 }
