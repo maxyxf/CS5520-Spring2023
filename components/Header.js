@@ -1,11 +1,11 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function Header(props) {
-  console.log(props);
+export default function Header({name}) {
+  console.log(name);
   return (
     <View>
-      <Text>Welcome to {props.name}</Text>
+      <Text>Welcome to {name}</Text>
     </View>
   )
 }

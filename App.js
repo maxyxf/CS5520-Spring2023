@@ -9,7 +9,7 @@ export default function App() {
       <Text>
         Welcome to {name}</Text>
       <StatusBar style="auto" />
-      <Header name = "Max" />
+      <Header name = "Max"/>
     </View>
   );
 }
